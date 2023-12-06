@@ -1,6 +1,5 @@
 
 import './App.css';
-import Navbar from './Components/Navbar';
 import ClientSolutions from './Pages/ClientSolutions';
 import Home from './Pages/Home';
 import { gsap } from 'gsap';
@@ -11,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 function App() {
   return (
-    <div className='bg-gray-200'>
+    <div className='w-full'>
      <Home/>
      <ClientSolutions/>
      <CoaderCommunity/>

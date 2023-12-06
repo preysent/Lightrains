@@ -3,17 +3,20 @@ import { gsap } from "gsap";
 import { Timeline } from '../context/gsap';
 import ImageSlider from '../Components/ImageSlider';
 import Navbar from '../Components/Navbar';
+import { Mode } from '../context/mode';
 
 const Home = () => {
 
   const main = useRef()
   const time = useContext(Timeline)
+  const {mode} = useContext(Mode)
+  console.log(mode)
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
 
       time.from("#title p", {
-        y: '100%',
+        y: '-100%',
         ease: "power1.in",
         duration: .5
       });
@@ -44,7 +47,7 @@ const Home = () => {
 
 
   return (
-    <main ref={main} className='bg-white'>
+    <main ref={main} className={`${(mode==="light")?'bg-gray-100 text-gray-950':'bg-gray-950 text-gray-100 transition-all'}`}>
       <Navbar/>
 
       <div id='title' className=' leading-none p-10 py-12 overflow-hidden'>
