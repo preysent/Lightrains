@@ -20,8 +20,8 @@ const ImageSlider = () => {
                     trigger: container.current,
                     // markers:true,
                     scrub: 1,
-                    start: "top 50%",
-                    end: "top 20%",
+                    start: "top 35%",
+                    end: "top 10%",
                 },
                 y: '-20%'
             })

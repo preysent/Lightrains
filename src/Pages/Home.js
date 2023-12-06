@@ -2,6 +2,7 @@ import React, { useContext, useLayoutEffect, useRef } from 'react'
 import { gsap } from "gsap";
 import { Timeline } from '../context/gsap';
 import ImageSlider from '../Components/ImageSlider';
+import Navbar from '../Components/Navbar';
 
 const Home = () => {
 
@@ -43,7 +44,8 @@ const Home = () => {
 
 
   return (
-    <main ref={main}>
+    <main ref={main} className='bg-white'>
+      <Navbar/>
 
       <div id='title' className=' leading-none p-10 py-12 overflow-hidden'>
         <p className='text-lg'> Blockchain, AI, and Beyond</p>

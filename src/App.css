@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+*::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(224, 224, 224);
+    padding:2px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border-radius: 14px;
+  }
+
 *{
     box-sizing: border-box;
 }
