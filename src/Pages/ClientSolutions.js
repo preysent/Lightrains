@@ -140,22 +140,6 @@ const ClientSolutions = () => {
                         </div>
 
 
-
-                        <div className='hover:shadow-xl max-w-[35vw] card flex-col flex items-center m-auto  bg-white p-5'>
-
-                            <div className=' max-h-full max-w-full'>
-                                <img alt='ok'
-                                    className='object-cover object-center w-full h-full' src='https://images.unsplash.com/photo-1640231912426-0d5feab0b9f9?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
-                            </div>
-
-                            <div >
-                                <h4 className='underline mt-5 text-lg text-gray-700'>AMM, DeFi and NFTs </h4>
-                                <p className='text-sm text-gray-400'> We implement smart contracts for automating enforcement in Hyperledger,</p>
-                            </div>
-                        </div>
-
-
-
                     </div>
 
                     <div className=' relative '>

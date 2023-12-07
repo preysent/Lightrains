@@ -5,6 +5,9 @@ import Home from './Pages/Home';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import CoaderCommunity from './Pages/CoaderCommunity';
+import Hackathon from './Pages/Hackathon ';
+import AboutUs from './Pages/AboutUs';
+import ContectUs from './Pages/ContectUs';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,6 +17,9 @@ function App() {
      <Home/>
      <ClientSolutions/>
      <CoaderCommunity/>
+     <Hackathon/>
+     <AboutUs/>
+     <ContectUs/>
     </div>
   );
 }

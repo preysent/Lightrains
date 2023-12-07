@@ -23,22 +23,20 @@ const Home = () => {
       time.from("#title h1", {
         opacity: 0,
         ease: "power1.in",
-        duration: 1,
+        duration: .5,
       });
 
-      // gsap.to("#image-div",{
-      //   scrollTrigger:{
-      //     trigger:"#image-div",
-      //     start:"-20%",
-      //     pin:true,
-      //     markers:true,
-      //     scrub:4,
-      //   },
-      //   // height:"100vh",
-      //   x:"50%",
-      //   duration:3,
+      gsap.to("#title h1",{
+        scrollTrigger:{
+          trigger:"#image-div",
+          start:"top 0%",
+          end: "top -5%",
+          scrub:3,
+        },
+        x:"20%",
+        
 
-      // })
+      })
     }, main);
 
     return () => ctx.revert();

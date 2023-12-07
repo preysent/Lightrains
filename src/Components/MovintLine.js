@@ -52,13 +52,13 @@ const MovingLine = () => {
                 </div>
                 <div className="container mx-auto   p-16 rounded-3xl items-center ">
                     <h1 id='heack-title' className="text-[4rem] font-bold mb-4 justify-center gap-2 flex overflow-hidden cursor-pointer ">
-                        <span>HealthOne</span>
-                        <span>Hackathon</span>
+                        <span>Talent </span>
+                        <span>Development </span>
                     </h1>
                 </div>
 
 
-                <div className='flex mb-4 overflow-hidden'>
+                {/* <div className='flex mb-4 overflow-hidden'>
 
                     <div className=' scroll-div inline-block whitespace-nowrap text-[4rem] space-x-3 text-black uppercase'>
                         <p className='inline-block  hover:text-blue-400 hover:drop-shadow-lg transition-all cursor-pointer'>Professional Development</p>
@@ -88,7 +88,7 @@ const MovingLine = () => {
                         <p className='inline-block  hover:text-blue-400 hover:drop-shadow-lg transition-all cursor-pointer'>-</p>
                     </div>
 
-                </div>
+                </div> */}
 
 
             </section>

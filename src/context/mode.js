@@ -6,7 +6,7 @@ export const Mode = createContext()
 
 
 const Gsap = ({children}) => {
-    const [mode, setMode]=useState("dark")
+    const [mode, setMode]=useState("light")
     
     const toggleMode = () =>{
         (mode==='dark')?setMode("light"):setMode("dark")

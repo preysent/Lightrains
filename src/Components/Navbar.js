@@ -43,12 +43,13 @@ const Navbar = () => {
         gsap.to(btn, {
             scale: 800,
             opacity:0,
+            duration:.5,
         })
         setTimeout(()=>{
             gsap.timeline()
             .to(btn, {
                 scale: 1,
-                duration:3,
+                duration:.01,
             })
             .to(btn,{
                 opacity:1
@@ -73,10 +74,8 @@ const Navbar = () => {
                     <a href="#" className="text-[.9rem] cursor-pointer font-semibold hover:text-gray-900">Client</a>
                     <a href="#" className="text-[.9rem] cursor-pointer font-semibold hover:text-gray-900">Community</a>
                     <a href="#" className="text-[.9rem] cursor-pointer font-semibold hover:text-gray-900">Contect Us</a>
-                    <div onClick={toggleSec} className='text-2xl text-white bg-black p-2 rounded-full cursor-pointer '>
-                        <MdModeNight />
-                    </div>
-                    <div className='sec-btn absolute w-1 h-1 bg-black text-black rounded-full'></div>
+                   
+                    <div onClick={toggleSec} className={`sec-btn w-6 h-6 ${(mode === "dark")?'bg-white':'bg-black'} rounded-full`}></div>
                 </nav>
 
 
