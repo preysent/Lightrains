@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { Mode } from '../context/mode'
 
 const EnquiryForm = () => {
     const [username, setUsername] = useState('')
@@ -7,6 +8,8 @@ const EnquiryForm = () => {
     const [number, setnumber] = useState('')
     const [Purpose, setPurpose] = useState('')
     const [message, setmessage] = useState('')
+
+    const {mode} = useContext(Mode)
 
 
 
@@ -23,15 +26,15 @@ const EnquiryForm = () => {
     };
 
     return (
-        <div className={`items-center w-full rounded-lg grid grid-cols-2  px-4 gap-10`}>
-            <div>
-                <h3 className='my-font text-3xl md:text-4xl font-bold text-black  uppercase '>register</h3>
+        <div className={`items-center w-full rounded-lg grid lg:grid-cols-2  px-4 gap-10 pb-12 lg:pb-0`}>
+            <div className='w-full flex flex-col items-center'>
+                <h3 className={`my-font text-[15vw] md:text-4xl font-bold ${mode === "light"?'text-black':'text-gray-200'}  uppercase `}>register</h3>
                 <p>WE'LL BE YOUR SPARRING PARTNER.</p>
 
             </div>
             <form
                 onSubmit={handleSubmit}
-                className=' gap-4 grid grid-cols-2 content-stretch w-full lg:min-w-[26rem] max-w-[26rem]'>
+                className=' gap-4 grid grid-cols-2 content-stretch w-full lg:min-w-[26rem] max-w-[26rem] m-auto'>
 
                 <input
                     className='text-sm p-4 bg-transparent outline outline-2 rounded-sm outline-gray-300 '
@@ -77,7 +80,7 @@ const EnquiryForm = () => {
                     placeholder='message  ' required />
 
 
-                <button className='bg-black text-gray-50 uppercase py-[1rem] tracking-[.2rem] font-bold text-[.75rem] rounded-full' type='submit'>submit</button>
+                <button className={`${mode === "light"?'bg-black text-gray-50':'bg-gray-100 text-black'} uppercase py-[1rem] tracking-[.2rem] font-bold text-[.75rem] rounded-full`} type='submit'>submit</button>
 
             </form>
         </div>

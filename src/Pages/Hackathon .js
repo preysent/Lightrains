@@ -1,10 +1,12 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useContext, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import Form from '../Components/Form';
+import { Mode } from '../context/mode';
 
 
 const HackathonPage = () => {
   const main = useRef()
+  const {mode} = useContext(Mode)
   
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -34,19 +36,17 @@ const HackathonPage = () => {
     }
   }
   return (
-    <div ref={main} className=" h-screen w-full">
+    <div ref={main} className={`min-h-screen w-full ${mode === "dark" ? 'bg-black':'bg-white'}`} >
 
-      <div className='w-[90%] bg-white h-[30rem] overflow-hidden flex flex-wrap m-auto my-20 relative'>
+      <div className='w-[90%] min-h-[30rem]  flex flex-wrap m-auto py-20 relative'>
 
-        <section className={`w-full md:w-2/4 p-8  }`}>
-
+        <section className={`w-full lg:w-2/4 lg:p-8  }`}>
           <Form/>
         </section>
 
-
-        <div id='moving-img' onClick={handleImageClick} className={`absolute p-2 rounded-xl overflow-hidden w-2/4  h-full right-0`}>
+        <div id='moving-img' onClick={handleImageClick} className={`absolute p-2 rounded-xl overflow-hidden lg:w-2/4 hidden lg:block h-full right-0`}>
           {flg ? <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1579567761406-4684ee0c75b6?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Hackathon"
             className="w-full h-full cursor-pointer object-cover object-center transition-all"
             
@@ -59,24 +59,18 @@ const HackathonPage = () => {
           />}
           <div className='absolute text-4xl top-2 left-2 cursor-pointer text-white uppercase '> click </div>
         </div>
-        <section className={`w-full md:w-2/4 p-8 h-full `}>
+
+        <section className={`w-full lg:w-2/4 md:p-8 py-10 lg:py-auto h-full ${mode === "dark"?'text-gray-100':'text-black'}`}>
           <h2 className="text-3xl font-semibold mb-4">Information about Hackathon</h2>
-          <p className="text-gray-700">
+          <p >
             A Hackathon is an exciting event that brings together individuals with diverse skills, a passion for
             problem-solving, and a thirst for innovation. It's a highly interactive and cooperative meeting where
             attendees collaborate to develop original ideas, frequently in a constrained amount of time. Hackathons
             provide people an opportunity to show off their skills and make a difference in solving real-world
-            problems while also encouraging creativity, cooperation, and unconventional thinking. Not only is it a
-            great chance for programmers to learn about fast ideation and prototype creation, but designers,
-            marketers, and thinkers of all stripes are invited as well! We thus cordially welcome you to take part
-            in our forthcoming Hackathon if you're a youthful thinker ready to make a significant impact.
+            problems while also encouraging creativity, cooperation, and unconventional thinking. 
           </p>
 
-          {/* <p className="text-gray-700">
-            Come along on this thrilling voyage of discovery and invention with us. Your innovative ideas and
-            inventive spirit could hold the secret to developing ground-breaking solutions. Join in the excitement
-            and let's jointly design the future so you don't miss out!
-          </p> */}
+          
         </section>
       </div>
 

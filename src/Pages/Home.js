@@ -10,7 +10,6 @@ const Home = () => {
   const main = useRef()
   const time = useContext(Timeline)
   const {mode} = useContext(Mode)
-  console.log(mode)
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -34,9 +33,21 @@ const Home = () => {
           scrub:3,
         },
         x:"20%",
-        
 
+      
+        
       })
+      gsap.to('#main-img ',{
+        
+        scrollTrigger:{
+          trigger:'#main-img',
+          // markers:true,
+          scrub:1,
+          end:"top 20%"
+        },
+        y:0,
+      })
+        
     }, main);
 
     return () => ctx.revert();
@@ -49,13 +60,23 @@ const Home = () => {
       <Navbar/>
 
       <div id='title' className=' leading-none p-10 py-12 overflow-hidden'>
-        <p className='text-lg'> Blockchain, AI, and Beyond</p>
-        <h1 className='text-[5rem] font-bold my-2 '>
-          We shape brands for greatness
+        {/* <p className='text-lg '> Revolutionizing Agriculture with the Pinnacle of AI, ML, Blockchain, and IoT Innovations </p> */}
+        <h1 className='text-[17vw] text-center my-font '>
+          LIGHTRAINS
         </h1>
       </div>
 
       <ImageSlider />
+
+      <div id='sub-title' className=' flex flex-col items-center '>
+        <p className=' text-center text-3xl px-10'> Revolutionizing Agriculture <br/> with the Pinnacle of AI, ML, Blockchain, and IoT Innovations </p>
+
+        <div id="main-img" className='h-[20rem] w-[80vw] translate-y-[15rem]'>
+          <img 
+          className='h-full w-full object-cover object-center'
+          src='https://plus.unsplash.com/premium_photo-1663076367860-3cde6cedaf66?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
+        </div>
+      </div>
 
     </main>
   )

@@ -1,8 +1,11 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useContext, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 import img1 from "../images/tech1.png"
+import { Mode } from '../context/mode';
 
 const MovingLine = () => {
+
+    const {mode} = useContext(Mode)
     const container = useRef()
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
@@ -46,12 +49,12 @@ const MovingLine = () => {
 
     return (
         <div ref={container} className='relative'>
-            <section className="text-gray-600 body-font w-full bg-cover">
+            <section className={`${mode==="dark"?'text-gray-100':'text-gray-600'} body-font w-full bg-cover`}>
                 <div id='tech-bg-1' className='absolute top-0 right-0 opacity-30 z-0 w-[50%]'>
                     <img className='w-full h-full' alt='ok' src={img1}></img>
                 </div>
-                <div className="container mx-auto   p-16 rounded-3xl items-center ">
-                    <h1 id='heack-title' className="text-[4rem] font-bold mb-4 justify-center gap-2 flex overflow-hidden cursor-pointer ">
+                <div className="container mx-auto   lg:p-16 rounded-3xl items-center ">
+                    <h1 id='heack-title' className="text-[10vw] md:text-[5rem] font-bold mb-4 justify-center gap-2 flex overflow-hidden cursor-pointer ">
                         <span>Talent </span>
                         <span>Development </span>
                     </h1>

@@ -61,7 +61,7 @@ const ClientSolutions = () => {
 
                 <div className=" px-5 heading flex flex-wrap w-full items-center mb-16">
                     <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-                        <h1 onMouseEnter={toggleLine} className={` text-[4rem] font-medium title-font mb-2 ${(mode === "dark") ? 'text-gray-200' : 'text-gray-900'}`}>Our Services</h1>
+                        <h1 onMouseEnter={toggleLine} className={`text-[15vw] lg:text-[4rem] font-medium title-font mb-2 ${(mode === "dark") ? 'text-gray-200' : 'text-gray-900'}`}>Our Services</h1>
 
                         <div className="h-1 w-full bg-black rounded">
                             <div id='line-mover' className='w-5 h-full bg-gray-200'></div>
@@ -72,12 +72,12 @@ const ClientSolutions = () => {
                         We create and handle advanced solutions in Blockchain, Smart Contracts, DeFi, AI, ML, Deep Learning, and computer vision at scale.</p>
                 </div>
 
-                <div className='max-fit flex'>
+                <div className='max-fit flex w-full'>
 
 
-                    <div className=' overflow-hidden p-3 grid grid-cols-2 content-center gap-2 flex-grow'>
+                    <div className=' overflow-hidden p-3 grid  md:grid-cols-2 md:content-center content-stretch w-full gap-2 flex-grow'>
 
-                        <div className='hover:shadow-xl max-w-[35vw] card flex-col flex items-center m-auto  bg-white p-5'>
+                        <div className='hover:shadow-xl lg:max-w-[35vw] card flex-col flex items-center m-auto w-full bg-white p-5'>
 
                             <div className=' max-h-full max-w-full'>
                                 <img alt='ok'
@@ -85,14 +85,14 @@ const ClientSolutions = () => {
                             </div>
 
                             <div >
-                                <h4 className='underline mt-5 text-lg text-gray-700'>Blockchain Consulting</h4>
-                                <p className='text-sm text-gray-400'>Our experienced team builds secure and scalable software,</p>
+                                <h4 className='underline mt-5 text-lg text-gray-700'>IoT: </h4>
+                                <p className='text-sm text-gray-400'>The usage of IoT in AgriTech is a component of the larger movement toward smart farming, which uses technology to build more effective and sustainable agricultural systems.</p>
                             </div>
                         </div>
 
 
 
-                        <div className='hover:shadow-xl max-w-[35vw] card flex-col flex items-center m-auto  bg-white p-5'>
+                        <div className='hover:shadow-xl lg:max-w-[35vw] card flex-col flex items-center m-auto  bg-white p-5'>
 
                             <div className=' max-h-full flex-1 max-w-full'>
                                 <img alt='ok'
@@ -101,8 +101,8 @@ const ClientSolutions = () => {
                             </div>
 
                             <div >
-                                <h4 className='underline mt-5 text-lg text-gray-700'>AI, ML, DL, and CV</h4>
-                                <p className='text-sm text-gray-400'>Guiding you with blockchain specialists and seasoned consultants</p>
+                                <h4 className='underline mt-5 text-lg text-gray-700'>Artificial Intelligence: </h4>
+                                <p className='text-sm text-gray-400'>AI in AgriTech has the potential to improve sustainability, production, and efficiency</p>
                             </div>
                         </div>
 
@@ -111,7 +111,7 @@ const ClientSolutions = () => {
 
 
 
-                        <div className='hover:shadow-xl max-w-[35vw] card flex-col flex items-center m-auto  bg-white p-5'>
+                        <div className='hover:shadow-xl lg:max-w-[35vw] card flex-col flex items-center m-auto  bg-white p-5'>
 
                             <div className=' max-h-full max-w-full'>
                                 <img alt='ok'
@@ -119,14 +119,14 @@ const ClientSolutions = () => {
                             </div>
 
                             <div >
-                                <h4 className='underline mt-5 text-lg text-gray-700'>Metaverse Development</h4>
-                                <p className='text-sm text-gray-400'> guiding you with blockchain specialists and seasoned consultants</p>
+                                <h4 className='underline mt-5 text-lg text-gray-700'>Machine Learning: </h4>
+                                <p className='text-sm text-gray-400'> Machine Learning (ML) is a key component of the agricultural sector transformation, providing answers to a range of problems and increasing productivity.</p>
                             </div>
                         </div>
 
 
 
-                        <div className='hover:shadow-xl max-w-[35vw] card flex-col flex items-center m-auto  bg-white p-5'>
+                        <div className='hover:shadow-xl lg:max-w-[35vw] card flex-col flex items-center m-auto  bg-white p-5'>
 
                             <div className=' max-h-full max-w-full'>
                                 <img alt='ok'
@@ -134,8 +134,8 @@ const ClientSolutions = () => {
                             </div>
 
                             <div >
-                                <h4 className='underline mt-5 text-lg text-gray-700'>Smart Contract Development</h4>
-                                <p className='text-sm text-gray-400'> We implement smart contracts for automating enforcement in Hyperledger,</p>
+                                <h4 className='underline mt-5 text-lg text-gray-700'>Blockchain:</h4>
+                                <p className='text-sm text-gray-400'> The creation of industry-wide standards and cooperation amongst many stakeholders are necessary for the implementation of blockchain solutions in the AgriTech sector.</p>
                             </div>
                         </div>
 

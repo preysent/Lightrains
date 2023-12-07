@@ -1,10 +1,13 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useContext, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 import MovingLine from '../Components/MovintLine';
 import img from "../images/tech2.png"
+import { Mode } from '../context/mode';
 
 const CoaderCommunity = () => {
   const container = useRef()
+  const {mode} = useContext(Mode)
+  console.log(mode)
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
 
@@ -19,7 +22,7 @@ const CoaderCommunity = () => {
           end: "+=200%",
           scrub: 3,
           pin: true,
-          markers: true
+          // markers: true
         }
       });
       rotateTimeline
@@ -40,14 +43,14 @@ const CoaderCommunity = () => {
   }, []);
 
   return (
-    <div ref={container}>
+  <div ref={container} className={`${mode === "dark"?'bg-black':'bg-white'}`}>
 
       <MovingLine />
 
       <div >
         <div className="canvas-container mx-auto mt-8 overflow-hidden w-full h-screen whitespace-nowrap relative">
 
-          <button className='absolute top-3 left-3 uppercase font-extrabold bg-black text-white p-4 rounded-xl cursor-pointer '>Enroll Now</button>
+          <button className={`absolute top-3 left-3 uppercase font-extrabold ${mode==='dark'?'bg-gray-600':'bg-black'} text-gray-200 p-4 rounded-xl cursor-pointer `}>Enroll Now</button>
         
           <div className='absolute top-3 left-3 uppercase font-extrabold text-white p-4 rounded-xl cursor-pointer opacity-40'>
             <img className='w-full h-full object-contain' src={img}/>
@@ -55,12 +58,11 @@ const CoaderCommunity = () => {
 
 
           <div id='moving-line-poster' className="container1 items-center justify-center m-auto text-[25rem] h-full w-fit uppercase  px-16 ">
-            <p>Exciting Opportunities for Creative Minds </p>
+            <p className={`${mode === "light"?'text-gray-900':'text-gray-100'}`}>Exciting Opportunities for Creative Minds </p>
           </div>
         </div>
 
       </div>
-        <div className='h-screen w-full'></div>
 
     </div>
   )

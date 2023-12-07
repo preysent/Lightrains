@@ -8,19 +8,26 @@ import CoaderCommunity from './Pages/CoaderCommunity';
 import Hackathon from './Pages/Hackathon ';
 import AboutUs from './Pages/AboutUs';
 import ContectUs from './Pages/ContectUs';
+import { useContext } from 'react';
+import { Mode } from './context/mode';
+// import Scroller from './context/Scroller';
 
-gsap.registerPlugin(ScrollTrigger)
 
 function App() {
+  gsap.registerPlugin(ScrollTrigger);
+  
+  const mode = useContext(Mode)
   return (
-    <div className='w-full'>
-     <Home/>
-     <ClientSolutions/>
-     <CoaderCommunity/>
-     <Hackathon/>
-     <AboutUs/>
-     <ContectUs/>
-    </div>
+    // <Scroller>
+      <div className={`w-full ${mode === 'dark' ? 'bg-black' : 'bg-white'}`}>
+        <Home />
+        <ClientSolutions />
+        <CoaderCommunity />
+        <Hackathon />
+        <AboutUs />
+        <ContectUs />
+      </div>
+    // </Scroller>
   );
 }
 

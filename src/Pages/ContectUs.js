@@ -1,10 +1,11 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useContext, useLayoutEffect, useRef } from 'react'
 import EnquiryForm from '../Components/EnquiryForm '
 import { gsap } from 'gsap'
+import { Mode } from '../context/mode'
 
 const ContectUs = () => {
     const main = useRef()
-
+    const {mode} = useContext(Mode)
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
@@ -13,7 +14,7 @@ const ContectUs = () => {
             gsap.to('.footer-title', {
                 scrollTrigger: {
                     trigger: '#footer',
-                    markers: true,
+                    // markers: true,
                     start: 'top 100%',
                     end: "bottom 100%",
                     scrub: 1,
@@ -30,8 +31,8 @@ const ContectUs = () => {
 
 
     return (
-        <div ref={main}>
-            <section className="text-black body-font relative max-h-screen ">
+        <div ref={main} className={`${mode === 'dark'?'bg-black':''}`}>
+            <section className={`${mode === 'dark'?'text-gray-500 bg-black':'text-black'} body-font relative max-h-screen`}>
                 <div className="container px-5 pt-24 mx-auto relative">
                     <EnquiryForm />
 

@@ -2,7 +2,6 @@ import React, { useContext, useLayoutEffect, useRef } from 'react'
 import SideMenu from './SideMenu';
 import { gsap } from 'gsap'
 import { Timeline } from '../context/gsap';
-import { MdModeNight } from "react-icons/md";
 import { Mode } from '../context/mode';
 
 
@@ -58,7 +57,7 @@ const Navbar = () => {
     }
 
     return (
-        <header ref={nav} className={`text-${(mode==="dark")?'gray-50 bg-gray-500':'gray-500'} body-font sticky top-0 z-30`}>
+        <header ref={nav} className={`text-${(mode==="dark")?'gray-50 bg-gray-800':'gray-500 bg-gray-100'} body-font sticky top-0 z-30`}>
             <div className="container mx-auto flex flex-wrap p-[.7rem] md:p-5 md:flex-row items-center justify-between lg:py-2">
 
                 <div className='h-14 overflow-hidden lg:h-12'>
@@ -70,10 +69,10 @@ const Navbar = () => {
                 {/* main navbar  */}
                 <nav className="lg:flex items-center text-base justify-end gap-16  hidden">
 
-                    <a href="#" className="text-[.9rem] cursor-pointer font-semibold hover:text-gray-900">Home</a>
-                    <a href="#" className="text-[.9rem] cursor-pointer font-semibold hover:text-gray-900">Client</a>
-                    <a href="#" className="text-[.9rem] cursor-pointer font-semibold hover:text-gray-900">Community</a>
-                    <a href="#" className="text-[.9rem] cursor-pointer font-semibold hover:text-gray-900">Contect Us</a>
+                    <a href="#" className="text-[.9rem] cursor-pointer  hover:text-gray-900">Home</a>
+                    <a href="#" className="text-[.9rem] cursor-pointer  hover:text-gray-900">Client</a>
+                    <a href="#" className="text-[.9rem] cursor-pointer  hover:text-gray-900">Community</a>
+                    <a href="#" className="text-[.9rem] cursor-pointer  hover:text-gray-900">Contect Us</a>
                    
                     <div onClick={toggleSec} className={`sec-btn w-6 h-6 ${(mode === "dark")?'bg-white':'bg-black'} rounded-full`}></div>
                 </nav>
