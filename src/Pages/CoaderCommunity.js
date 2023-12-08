@@ -53,7 +53,7 @@ const CoaderCommunity = () => {
           <button className={`absolute top-3 left-3 uppercase font-extrabold ${mode==='dark'?'bg-gray-600':'bg-black'} text-gray-200 p-4 rounded-xl cursor-pointer `}>Enroll Now</button>
         
           <div className='absolute top-3 left-3 uppercase font-extrabold text-white p-4 rounded-xl cursor-pointer opacity-40'>
-            <img className='w-full h-full object-contain' src={img}/>
+            <img className='w-full h-full object-contain' src={img} alt='background' />
           </div>
 
 

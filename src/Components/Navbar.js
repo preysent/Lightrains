@@ -3,17 +3,18 @@ import SideMenu from './SideMenu';
 import { gsap } from 'gsap'
 import { Timeline } from '../context/gsap';
 import { Mode } from '../context/mode';
+import Switch from './Switch';
 
 
 const Navbar = () => {
 
     const nav = useRef()
     const time = useContext(Timeline)
-    const {toggleMode, mode} = useContext(Mode)
+    const {mode} = useContext(Mode)
 
 
     useLayoutEffect(() => {
-        let ctx = gsap.context(() => {
+        let ctx = gsap.context(() => { 
 
             time.from("#logo", {
                 x: '-100%',
@@ -31,30 +32,9 @@ const Navbar = () => {
 
         }, nav);
 
-
-
         return () => ctx.revert();
-    }, []);
-    const toggleSec = () => {
-        toggleMode()
-        const btn = document.querySelector(".sec-btn")
-
-        gsap.to(btn, {
-            scale: 800,
-            opacity:0,
-            duration:.5,
-        })
-        setTimeout(()=>{
-            gsap.timeline()
-            .to(btn, {
-                scale: 1,
-                duration:.01,
-            })
-            .to(btn,{
-                opacity:1
-            })
-        },500)
-    }
+    });
+   
 
     return (
         <header ref={nav} className={`text-${(mode==="dark")?'gray-50 bg-gray-800':'gray-500 bg-gray-100'} body-font sticky top-0 z-30`}>
@@ -69,12 +49,13 @@ const Navbar = () => {
                 {/* main navbar  */}
                 <nav className="lg:flex items-center text-base justify-end gap-16  hidden">
 
-                    <a href="#" className="text-[.9rem] cursor-pointer  hover:text-gray-900">Home</a>
-                    <a href="#" className="text-[.9rem] cursor-pointer  hover:text-gray-900">Client</a>
-                    <a href="#" className="text-[.9rem] cursor-pointer  hover:text-gray-900">Community</a>
-                    <a href="#" className="text-[.9rem] cursor-pointer  hover:text-gray-900">Contect Us</a>
+                    <h5 className="text-[.9rem] cursor-pointer  hover:text-gray-900">Home</h5>
+                    <h5 className="text-[.9rem] cursor-pointer  hover:text-gray-900">Client</h5>
+                    <h5 className="text-[.9rem] cursor-pointer  hover:text-gray-900">Community</h5>
+                    <h5 className="text-[.9rem] cursor-pointer  hover:text-gray-900">Contect Us</h5>
+
+                    <Switch/>
                    
-                    <div onClick={toggleSec} className={`sec-btn w-6 h-6 ${(mode === "dark")?'bg-white':'bg-black'} rounded-full`}></div>
                 </nav>
 
 

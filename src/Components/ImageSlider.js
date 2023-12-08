@@ -36,20 +36,20 @@ const ImageSlider = () => {
             <div className='image-div h-[30rem] flex-1 whitespace-nowrap bg-red-300'>
 
                 <div className='h-full inline-block w-[30rem]'>
-                    <video loop muted autoPlay >
+                    <video loop muted >
                         <source src="https://flowstatebranding.com/wp-content/uploads/2021/06/FS-Montage-5_6-1-21-1322_1500px.webm" />
                     </video>
                 </div>
 
                 <div className='h-full inline-block w-[30rem]'>
-                    <video loop muted autoPlay >
+                    <video loop muted >
                         <source src="https://flowstatebranding.com/wp-content/uploads/2021/03/FS-Montage-2_3-1-21-2250.webm" />
                     </video>
 
                 </div>
 
                 <div className='h-full inline-block w-[30rem]'>
-                    <video loop muted autoPlay >
+                    <video loop muted >
                         <source src="https://flowstatebranding.com/wp-content/uploads/2021/03/FS-Montage-3_3-2-21-0835.webm" />
                     </video>
                 </div>
@@ -64,20 +64,20 @@ const ImageSlider = () => {
             <div className='image-div h-[30rem] flex-1 whitespace-nowrap bg-red-300'>
 
                 <div className='h-full inline-block w-[30rem]'>
-                    <video loop muted autoPlay >
+                    <video loop muted >
                         <source src="https://flowstatebranding.com/wp-content/uploads/2021/06/FS-Montage-5_6-1-21-1322_1500px.webm" />
                     </video>
                 </div>
 
                 <div className='h-full inline-block w-[30rem]'>
-                    <video loop muted autoPlay >
+                    <video loop muted >
                         <source src="https://flowstatebranding.com/wp-content/uploads/2021/03/FS-Montage-2_3-1-21-2250.webm" />
                     </video>
 
                 </div>
 
                 <div className='h-full inline-block w-[30rem]'>
-                    <video loop muted autoPlay >
+                    <video loop muted >
                         <source src="https://flowstatebranding.com/wp-content/uploads/2021/03/FS-Montage-3_3-2-21-0835.webm" />
                     </video>
                 </div>

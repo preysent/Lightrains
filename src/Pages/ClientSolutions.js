@@ -59,11 +59,11 @@ const ClientSolutions = () => {
         <section className={`w-full ${(mode === "dark") ? 'bg-gray-950' : 'bg-gray-100'}`}>
             <div ref={container} className="container   py-24 mx-auto">
 
-                <div className=" px-5 heading flex flex-wrap w-full items-center mb-16">
-                    <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-                        <h1 onMouseEnter={toggleLine} className={`text-[15vw] lg:text-[4rem] font-medium title-font mb-2 ${(mode === "dark") ? 'text-gray-200' : 'text-gray-900'}`}>Our Services</h1>
+                <div className=" px-5 lg:px-28 heading flex flex-wrap w-full items-center mb-16">
+                    <div className="lg:w-1/2 w-fit mb-6 lg:mb-0">
+                        <h1 onMouseEnter={toggleLine} className={`text-5xl self-center lg:text-[4rem]  ${(mode === "dark") ? 'text-gray-200' : 'text-gray-900'}`}>Our Services</h1>
 
-                        <div className="h-1 w-full bg-black rounded">
+                        <div className="h-[.2rem] w-full bg-black rounded">
                             <div id='line-mover' className='w-5 h-full bg-gray-200'></div>
                         </div>
 
@@ -143,8 +143,8 @@ const ClientSolutions = () => {
                     </div>
 
                     <div className=' relative '>
-                        <div className={` ${(mode==="dark")?'bg-white':'bg-black'} w-[1px] mx-3 h-screen sticky top-0 py-20`}>
-                            <p className={`[writing-mode:vertical-rl] ${(mode==="dark")?'bg-gray-950 text-gray-50':'text-gray-400 bg-white'} uppercase  py-2 text-xs top-32 sticky align-middle translate-x-[-8px]`} > featured word </p>
+                        <div className={` ${(mode === "dark") ? 'bg-white' : 'bg-black'} w-[1px] mx-3 h-screen sticky top-0 py-20`}>
+                            <p className={`[writing-mode:vertical-rl] ${(mode === "dark") ? 'bg-gray-950 text-gray-50' : 'text-gray-400 bg-white'} uppercase  py-2 text-xs top-32 sticky align-middle translate-x-[-8px]`} > featured word </p>
                         </div>
 
                     </div>

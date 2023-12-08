@@ -1,4 +1,4 @@
-import React, { useContext, useLayoutEffect, useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import Form from '../Components/Form';
 import { Mode } from '../context/mode';
@@ -8,16 +8,6 @@ const HackathonPage = () => {
   const main = useRef()
   const {mode} = useContext(Mode)
   
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-
-      
-
-    }, main);
-
-    return () => ctx.revert();
-  }, []);
-
   const [flg, setFlg] = useState(true)
 
   const handleImageClick = () => {
@@ -36,25 +26,25 @@ const HackathonPage = () => {
     }
   }
   return (
-    <div ref={main} className={`min-h-screen w-full ${mode === "dark" ? 'bg-black':'bg-white'}`} >
+    <div ref={main} className={`h-fit w-full ${mode === "dark" ? 'bg-black':'bg-white'}`} >
 
-      <div className='w-[90%] min-h-[30rem]  flex flex-wrap m-auto py-20 relative'>
+      <div className='w-[90%] h-fit  flex flex-wrap m-auto py-20 relative'>
 
-        <section className={`w-full lg:w-2/4 lg:p-8  }`}>
+        <div className={`w-full lg:w-2/4 lg:p-8  }`}>
           <Form/>
-        </section>
+        </div>
 
         <div id='moving-img' onClick={handleImageClick} className={`absolute p-2 rounded-xl overflow-hidden lg:w-2/4 hidden lg:block h-full right-0`}>
           {flg ? <img
             src="https://images.unsplash.com/photo-1579567761406-4684ee0c75b6?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Hackathon"
-            className="w-full h-full cursor-pointer object-cover object-center transition-all"
+            className="w-full h-[75%] cursor-pointer object-cover object-center transition-all"
             
           />
          : <img
             src="https://images.unsplash.com/photo-1571513151379-9612cf354937?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Hackathon"
-            className="w-full h-full cursor-pointer object-cover object-center transition-all"
+            className="w-full h-[75%] cursor-pointer object-cover object-center transition-all"
             
           />}
           <div className='absolute text-4xl top-2 left-2 cursor-pointer text-white uppercase '> click </div>
