@@ -65,7 +65,7 @@ const MovingLine = () => {
                     </div>
                 </div>
 
-                <p className='main1-font text-gray-500 lg:hidden'>
+                <p className='main1-font text-gray-500 lg:hidden px-6 md:p-14'>
                     A Hackathon is an exciting event that brings together individuals with diverse skills, a passion for problem-solving, and a thirst for innovation. It's a highly interactive and cooperative meeting where attendees collaborate to develop original ideas, frequently in a constrained amount of time. Hackathons provide people an opportunity to show off their skills and make a difference in solving real-world problems while also encouraging creativity, cooperation, and unconventional thinking.
                 </p>
 

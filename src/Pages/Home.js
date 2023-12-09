@@ -26,7 +26,7 @@ const Home = () => {
         duration: .5,
       });
 
-      
+
       gsap.to('#main-img ', {
 
         scrollTrigger: {
@@ -56,7 +56,10 @@ const Home = () => {
             Grow smart, Farm simple
           </h2>
         </div>
-        <Switch/>
+
+        <div className='hidden lg:block'>
+          <Switch />
+        </div>
       </div>
 
       <ImageSlider />

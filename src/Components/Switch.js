@@ -5,7 +5,7 @@ const Switch = () => {
   const { mode, toggleMode } = useContext(Mode);
 
   return (
-    <div>
+    <>
       <div
         onClick={toggleMode}
         className={`relative w-12 h-7 flex items-center cursor-pointer transition-colors ${
@@ -18,7 +18,7 @@ const Switch = () => {
           }`}
         ></div>
       </div>
-    </div>
+    </>
   );
 };
 

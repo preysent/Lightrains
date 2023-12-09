@@ -10,8 +10,8 @@ const Card = ({link, title, pera}) => {
         </div>
 
         <div >
-          <h4 className='underline mt-5 text-lg text-gray-700'>{title} </h4>
-          <p className='text-sm text-gray-400'>{pera}</p>
+          <h4 className='underline mt-5 text-lg text-black'>{title} </h4>
+          <p className='text-sm text-gray-900'>{pera}</p>
         </div>
       </div>
 

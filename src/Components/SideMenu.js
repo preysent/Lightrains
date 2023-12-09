@@ -4,7 +4,6 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { Mode } from '../context/mode';
-import Switch from './Switch';
 
 
 const SideMenu = () => {
@@ -31,27 +30,24 @@ const SideMenu = () => {
 
                 <nav className={`flex top-0 left-0 w-full h-screen  gap-4 flex-col ${mode === 'light' ? 'bg-white' : 'bg-black'} p-4 text-3xl transition-colors rounded-md`}>
 
-                    <div className='flex items-center'>
-                        <Switch />
 
-                        <div onClick={toggleSlide} className='p-3 cursor-pointer text-2xl ml-auto'>
-                            <IoClose />
-                        </div>
+                    <div onClick={toggleSlide} className='p-3 cursor-pointer text-2xl ml-auto'>
+                        <IoClose />
                     </div>
 
-                    <div className='flex items-center justify-center flex-col h-full gap-6'>
-                        <h5 className="my-font text-5xl w-full text-center py-1">Home</h5> <hr />
-                        <h5 className="my-font text-5xl w-full text-center py-1">Client</h5> <hr />
-                        <h5 className="my-font text-5xl w-full text-center py-1">Community</h5> <hr />
-                        <h5 className="my-font text-5xl w-full text-center py-1">Contect Us</h5> <hr />
+
+                    <h5 className="my-font text-5xl w-full text-center py-1">Home</h5> <hr />
+                    <h5 className="my-font text-5xl w-full text-center py-1">Client</h5> <hr />
+                    <h5 className="my-font text-5xl w-full text-center py-1">Community</h5> <hr />
+                    <h5 className="my-font text-5xl w-full text-center py-1">Contect Us</h5> <hr />
 
 
-                        <div className='flex text-2xl justify-center py-10 gap-5'>
-                            <FaFacebookF />
-                            <FaInstagram />
-                            <FaLinkedinIn />
-                        </div>
+                    <div className='flex text-2xl justify-center gap-5'>
+                        <FaFacebookF />
+                        <FaInstagram />
+                        <FaLinkedinIn />
                     </div>
+
                 </nav>
 
 

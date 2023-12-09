@@ -5,6 +5,7 @@ import { Timeline } from '../context/gsap';
 import { Mode } from '../context/mode';
 import logoBlack from "../images/logo-black.jpg"
 import logoWhite from "../images/logo-white.jpg"
+import Switch from './Switch';
 
 
 const Navbar = () => {
@@ -58,7 +59,8 @@ const Navbar = () => {
 
 
 
-                <div className="text-3xl border-0 py-1 px-3 focus:outline-none md:mt-0 lg:hidden">
+                <div className="text-3xl border-0 py-1 px-3 focus:outline-none md:mt-0 lg:hidden flex gap-3 items-center">
+                    <Switch className="md:hidden" />
                     <SideMenu />
                 </div>
 
