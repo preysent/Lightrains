@@ -3,7 +3,8 @@ import SideMenu from './SideMenu';
 import { gsap } from 'gsap'
 import { Timeline } from '../context/gsap';
 import { Mode } from '../context/mode';
-import Switch from './Switch';
+import logoBlack from "../images/logo-black.jpg"
+import logoWhite from "../images/logo-white.jpg"
 
 
 const Navbar = () => {
@@ -16,18 +17,12 @@ const Navbar = () => {
     useLayoutEffect(() => {
         let ctx = gsap.context(() => { 
 
-            time.from("#logo", {
-                x: '-100%',
-                delay: 1,
-                ease: "power1",
-                duration: .25,
-            })
-
-            time.from("a", {
+           time.from("h5", {
                 y: '-200%',
                 ease: "power1",
-                duration: .25,
-                stagger: .05,
+                duration: .3,
+                stagger: .1,
+            
             });
 
         }, nav);
@@ -37,13 +32,18 @@ const Navbar = () => {
    
 
     return (
-        <header ref={nav} className={`text-${(mode==="dark")?'gray-50 bg-gray-800':'gray-500 bg-gray-100'} body-font sticky top-0 z-30`}>
-            <div className="container mx-auto flex flex-wrap p-[.7rem] md:p-5 md:flex-row items-center justify-between lg:py-2">
+        <header ref={nav} className={`${(mode==="dark")?'text-white bg-black':'text-black bg-gray-100'} body-font fixed w-full top-0 z-30`}>
+
+            <div className={` container mx-auto flex flex-wrap p-[.7rem] md:p-5 md:flex-row items-center justify-between lg:py-2`}>
 
                 <div className='h-14 overflow-hidden lg:h-12'>
-                    <img id='logo'
-                        className='object-contain object-center h-full '
-                        src='https://media.licdn.com/dms/image/C4D0BAQFBy9yv2uUPUQ/company-logo_200_200/0/1631347506559?e=2147483647&v=beta&t=fkMzJdnDInolJhg2pkuj8EJk5YyKabYJF6UrWIcH6mE' alt='logo' />
+                    {mode==="light"
+                    ?<img 
+                    className='object-contain object-center h-full '
+                    src={logoBlack} alt='logo-black' />
+                    :<img 
+                    className='object-contain object-center h-full '
+                    src={logoWhite} alt='logo-white' />}
                 </div>
 
                 {/* main navbar  */}
@@ -54,8 +54,6 @@ const Navbar = () => {
                     <h5 className="text-[.9rem] cursor-pointer  hover:text-gray-900">Community</h5>
                     <h5 className="text-[.9rem] cursor-pointer  hover:text-gray-900">Contect Us</h5>
 
-                    <Switch/>
-                   
                 </nav>
 
 

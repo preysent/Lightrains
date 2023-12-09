@@ -1,17 +1,25 @@
-import React, { useContext } from 'react'
-import {Mode} from "../context/mode"
+import React, { useContext } from 'react';
+import { Mode } from '../context/mode';
 
 const Switch = () => {
-    const {mode,toggleMode } = useContext(Mode)
-    return (
-        <div>
-            <div onClick={toggleMode} className={`border-2 ${mode==='dark'?"border-gray-200":'border-gray-600'} w-[3rem] h-[1.5rem] rounded-full `}>
+  const { mode, toggleMode } = useContext(Mode);
 
-                <div id="switch" className={`w-1/2 h-full  rounded-full  transition-all ${mode === 'dark'?"translate-x-full bg-white":'bg-black'} `}> </div>
+  return (
+    <div>
+      <div
+        onClick={toggleMode}
+        className={`relative w-12 h-7 flex items-center cursor-pointer transition-colors ${
+          mode === 'dark' ? 'bg-gray-400' : 'bg-gray-300'
+        } rounded-full p-1`}
+      >
+        <div
+          className={`w-5 h-5 bg-white rounded-full shadow-md transform transition-transform ${
+            mode === 'dark' ? 'translate-x-full' : 'translate-x-0'
+          }`}
+        ></div>
+      </div>
+    </div>
+  );
+};
 
-            </div>
-        </div>
-    )
-}
-
-export default Switch
+export default Switch;

@@ -40,13 +40,9 @@ const AboutUs = () => {
                         src='https://images.unsplash.com/photo-1557264337-e8a93017fe92?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
                 </div>
 
-                {/* <div id='about-desc' className="container px-5 py-16 mx-auto justify-center flex flex-wrap absolute top-0">
-                    <h1 className='my-font uppercase font-bold text-[5rem]'>About us</h1>
+                
 
-                   
-                </div> */}
-
-                <div id='about-desc' className={`${mode === "dark" ? '' : 'text-black'} top-1 body-font w-full bg-cover md:text-center text-justify p-y md:px-12 max-w-[55rem] pb-16`}>
+                <div id='about-desc' className={`${mode === "dark" ? 'text-white' : 'text-black'} top-1 body-font w-full bg-cover md:text-center text-justify p-y md:px-12 max-w-[55rem] pb-16`}>
 
                     
                     <div className="container mx-auto px-4  lg:p-16 rounded-3xl items-center mb-4 w-fit ">

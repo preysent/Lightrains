@@ -1,6 +1,6 @@
 
 import './App.css';
-import ClientSolutions from './Pages/ClientSolutions';
+import OurServices from './Pages/OurServices';
 import Home from './Pages/Home';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,24 +10,21 @@ import AboutUs from './Pages/AboutUs';
 import ContectUs from './Pages/ContectUs';
 import { useContext } from 'react';
 import { Mode } from './context/mode';
-// import Scroller from './context/Scroller';
 
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
   
-  const mode = useContext(Mode)
+  const {mode} = useContext(Mode)
   return (
-    // <Scroller>
-      <div className={`w-full ${mode === 'dark' ? 'bg-black' : 'bg-white'}`}>
+      <div className={`w-full ${mode === 'dark' ? 'bg-black' : 'bg-white'} overflow-hidden`}>
         <Home />
-        <ClientSolutions />
+        <OurServices />
         <CoaderCommunity />
         <Hackathon />
         <AboutUs />
         <ContectUs />
       </div>
-    // </Scroller>
   );
 }
 

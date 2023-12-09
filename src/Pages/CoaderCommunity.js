@@ -47,7 +47,7 @@ const CoaderCommunity = () => {
 
       <MovingLine />
 
-      <div >
+      {/* <div >
         <div className="canvas-container mx-auto mt-8 overflow-hidden w-full h-screen whitespace-nowrap relative">
 
           <button className={`absolute top-3 left-3 uppercase font-extrabold ${mode==='dark'?'bg-gray-600':'bg-black'} text-gray-200 p-4 rounded-xl cursor-pointer `}>Enroll Now</button>
@@ -62,7 +62,7 @@ const CoaderCommunity = () => {
           </div>
         </div>
 
-      </div>
+      </div> */}
 
     </div>
   )
