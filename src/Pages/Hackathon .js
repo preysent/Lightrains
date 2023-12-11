@@ -26,11 +26,11 @@ const HackathonPage = () => {
     }
   }
   return (
-    <div ref={main} className={`h-fit w-full ${mode === "dark" ? 'bg-black':'bg-white'}`} >
+    <div ref={main} className={`h-fit md:w-[90%] mx-auto ${mode === "dark" ? 'bg-black':'bg-white'}`} >
 
-      <div className='w-[90%] h-fit  flex flex-wrap m-auto py-20 relative'>
+      <div className=' h-fit  flex flex-wrap m-auto py-20 relative'>
 
-        <div className={`w-full lg:w-2/4 lg:p-8  }`}>
+        <div className={`w-full lg:w-2/4 lg:p-8}`}>
           <Form/>
         </div>
 
@@ -50,7 +50,7 @@ const HackathonPage = () => {
           <div className='absolute text-4xl top-2 left-2 cursor-pointer text-white uppercase '> click </div>
         </div>
 
-        <section className={`w-full lg:w-2/4 md:p-8 py-10 lg:py-auto h-full ${mode === "dark"?'text-gray-100':'text-black'}`}>
+        <section className={`w-[90%] mx-auto lg:w-2/4 md:p-8 py-10 lg:py-auto h-full ${mode === "dark"?'text-gray-100':'text-black'}`}>
           <h2 className="text-3xl font-semibold mb-4">Information about Hackathon</h2>
           <p >
             A Hackathon is an exciting event that brings together individuals with diverse skills, a passion for
