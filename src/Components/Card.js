@@ -1,19 +1,23 @@
 import React from 'react'
+import "../Styles/Card.css"
+import ArrowButton from './Button'
 
-const Card = ({link, title, pera}) => {
+const Card = ({ link, title, pera }) => {
   return (
     <>
-      <div className='hover:shadow-xl lg:max-w-[35vw] card flex-col flex items-center m-auto  bg-white p-5'>
-
-        <div className=' max-h-full max-w-full'>
-          <img alt='ok' className='object-cover object-center w-full h-full' src={link}/>
+      <section id={title} className="card">
+        <img alt='ok' className='object-cover object-center w-full h-full' src={link} />
+        <div className="card__content flex flex-col justify-between lg:py-10 p-[1.3rem]" >
+          <div>
+            <p className="card__title leading-none text-4xl">{title}</p>
+            <p className="card__description">
+              {pera}
+            </p>
+          </div>
+          <ArrowButton  className="mb-4"/>
         </div>
+      </section>
 
-        <div >
-          <h4 className='underline mt-5 text-lg text-black'>{title} </h4>
-          <p className='text-sm text-gray-900'>{pera}</p>
-        </div>
-      </div>
 
     </>
   )
