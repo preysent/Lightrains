@@ -1,8 +1,9 @@
 import React from 'react'
 import "../Styles/Card.css"
 import ArrowButton from './Button'
+import { Link } from 'react-router-dom'
 
-const Card = ({ link, title, pera }) => {
+const Card = ({ link, title, pera, rout }) => {
   return (
     <>
       <section id={title} className="card">
@@ -14,7 +15,9 @@ const Card = ({ link, title, pera }) => {
               {pera}
             </p>
           </div>
-          <ArrowButton  className="mb-4"/>
+          <Link to={rout} className="mb-4 ml-auto">
+            <ArrowButton />
+          </Link>
         </div>
       </section>
 

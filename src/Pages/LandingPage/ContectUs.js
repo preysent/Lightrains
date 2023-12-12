@@ -1,7 +1,7 @@
 import React, { useContext, useLayoutEffect, useRef } from 'react'
-import EnquiryForm from '../Components/EnquiryForm '
+import EnquiryForm from '../../Components/EnquiryForm '
 import { gsap } from 'gsap'
-import { Mode } from '../context/mode'
+import { Mode } from '../../context/mode'
 
 const ContectUs = () => {
     const main = useRef()

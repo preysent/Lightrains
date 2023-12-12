@@ -26,7 +26,7 @@ const EnquiryForm = () => {
     };
 
     return (
-        <div className={`items-center w-full lg:w-[95%] pb-12 mx-auto grid lg:grid-cols-2 p-4 gap-10  border-2 rounded-lg shadow-form ${mode === 'dark' ? "shadow-gray-500 border-white" : "shadow-black border-black"}`}>
+        <div className={`items-center w-full lg:w-[95%] mx-auto grid lg:grid-cols-2 p-4 gap-10  border-2 rounded-lg shadow-form ${mode === 'dark' ? "shadow-gray-500 border-white" : "shadow-black border-black"}`}>
             <div className='w-full flex flex-col items-center'>
                 <h3 className={`my-font text-[15vw] md:text-4xl font-bold ${mode === "light" ? 'text-black' : 'text-gray-200'}  uppercase `}>register</h3>
                 <p>WE'LL BE YOUR SPARRING PARTNER.</p>

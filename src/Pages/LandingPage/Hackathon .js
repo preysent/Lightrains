@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import Form from '../Components/Form';
-import { Mode } from '../context/mode';
+import Form from '../../Components/Form';
+import { Mode } from '../../context/mode';
 
 
 const HackathonPage = () => {

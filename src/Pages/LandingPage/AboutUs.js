@@ -1,6 +1,6 @@
 import React, { useContext, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap';
-import { Mode } from '../context/mode';
+import { Mode } from '../../context/mode';
 
 const AboutUs = () => {
 

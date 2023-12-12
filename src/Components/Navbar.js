@@ -6,6 +6,7 @@ import { Mode } from '../context/mode';
 import logoBlack from "../images/logo-black.jpg"
 import logoWhite from "../images/logo-white.jpg"
 import Switch from './Switch';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -37,7 +38,7 @@ const Navbar = () => {
 
             <div className={` container mx-auto flex flex-wrap p-[.7rem] md:p-5 md:flex-row items-center justify-between lg:py-2`}>
 
-                <div className='h-14 overflow-hidden lg:h-12'>
+                <Link to="/" className='h-14 overflow-hidden lg:h-12'>
                     {mode==="light"
                     ?<img 
                     className='object-contain object-center h-full '
@@ -45,7 +46,7 @@ const Navbar = () => {
                     :<img 
                     className='object-contain object-center h-full '
                     src={logoWhite} alt='logo-white' />}
-                </div>
+                </Link>
 
                 {/* main navbar  */}
                 <nav className="lg:flex items-center text-base justify-end gap-16  hidden">

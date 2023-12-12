@@ -1,8 +1,8 @@
 import React, { useContext, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap';
-import MovingLine from '../Components/MovintLine';
-import img from "../images/tech2.png"
-import { Mode } from '../context/mode';
+import MovingLine from '../../Components/MovintLine';
+// import img from "../images/tech2.png"
+import { Mode } from '../../context/mode';
 
 const CoaderCommunity = () => {
   const container = useRef()

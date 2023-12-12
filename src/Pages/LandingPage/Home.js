@@ -1,10 +1,9 @@
 import React, { useContext, useLayoutEffect, useRef } from 'react'
 import { gsap } from "gsap";
-import { Timeline } from '../context/gsap';
-import ImageSlider from '../Components/ImageSlider';
-import Navbar from '../Components/Navbar';
-import { Mode } from '../context/mode';
-import Switch from '../Components/Switch';
+import { Timeline } from '../../context/gsap';
+import ImageSlider from '../../Components/ImageSlider';
+import { Mode } from '../../context/mode';
+import Switch from '../../Components/Switch';
 
 const Home = () => {
 
@@ -47,8 +46,7 @@ const Home = () => {
 
   return (
     <main ref={main} className={`${(mode === "light") ? 'bg-gray-100 text-black' : 'bg-black text-gray-100 transition-all'}`}>
-      <Navbar />
-
+     
       <div id='title' className=' leading-tight p-5 py-12 pt-[10rem] lg:px-10 overflow-hidden flex items-center'>
         <div className='flex-grow'>
           <p className='text-lg'> Lightrains </p>
